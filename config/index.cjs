@@ -15,12 +15,34 @@ const USER_CONFIG = {
   APP_SECRET: '',
 
   PROVINCE: '广东',
-  CITY: '惠州',
+  CITY: '珠海',
+
+  IS_SHOW_COLOR: true,
 
   USERS: [
     {
       // 想要发送的人的名字
-      name: '宝贝',
+      name: '飞宝',
+      // 使用微信测试号：扫码关注你的微信测试号后生成的一段字符串，在测试号后台能看到
+      id: 'dae396bf82844e27b62fb5e5a539ef22',
+      
+      // 使用微信测试号：你想对他发送的模板消息的模板ID
+      useTemplateId: '0001',
+      // 新历生日, 仅用作获取星座运势, 格式必须为MM-DD
+      horoscopeDate: '03-16',
+      festivals: [
+        // 注意：此条配置日期为阴历日期，因为`type`中 “生日” 之前有 * 符号
+      ],
+      // 我们在一起已经有xxxx天了的配置
+      customizedDateList: [
+        // 在一起的日子
+        { keyword: 'love_day', date: '2022-02-03' },
+      ],
+    },
+
+    {
+      // 想要发送的人的名字
+      name: 'test',
       // 使用微信测试号：扫码关注你的微信测试号后生成的一段字符串，在测试号后台能看到
       id: '89db09e180d540da950a6e890cc6d5f9',
       
@@ -30,12 +52,6 @@ const USER_CONFIG = {
       horoscopeDate: '03-16',
       festivals: [
         // 注意：此条配置日期为阴历日期，因为`type`中 “生日” 之前有 * 符号
-        {
-          type: '*生日', name: '宝贝', year: '1998', date: '03-16',
-        },
-        {
-          type: '节日', name: '相识纪念日', year: '2020', date: '09-03',
-        },
       ],
       // 我们在一起已经有xxxx天了的配置
       customizedDateList: [
@@ -60,4 +76,3 @@ const USER_CONFIG = {
 }
 
 module.exports = USER_CONFIG
-
